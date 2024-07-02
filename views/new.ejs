@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <div class="container">
+      <h1>Adding New User in DB</h1>
+      <form action="/users" method="post">
+        <input type="text" name="name" placeholder="Enter Username" class="form-control">
+        <input type="email" name="email" placeholder="Enter email" class="form-control">
+        <input type="password" name="password" placeholder="Enter password" class="form-control">
+        <button type="submit" class="btn btn-success btn-lg">ADD New</button>
+      </form>
+    </div>
+</body>
+</html>

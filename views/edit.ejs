@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Username</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="edit-page-container">
+      <h1 class="edit-page-h1">Edit the UserName Based On The Id</h1>
+      <p class="edit-page-details">
+        Post ID : <span class="light-text"><%= data.id %></span>
+      </p>
+      <div class="edit-page-details">
+        <h3 class="bold-text">
+          @Username : <span class="detail-value"><%= data.name %></span>
+        </h3>
+        <h3 class="bold-text">
+          Email : <span class="detail-value"><%= data.email %></span>
+        </h3>
+        <h3 class="bold-text">
+          Password : <span class="detail-value"><%= data.password %></span>
+        </h3>
+      </div>
+      <form method="POST" action="/users/<%= data.id %>?_method=PATCH">
+        <div class="form-group">
+          <textarea
+            name="username"
+            id="username"
+            cols="30"
+            rows="10"
+            class="form-control"
+          >
+<%= data.name %></textarea
+          >
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter The Password"
+            required
+            class="form-control"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
