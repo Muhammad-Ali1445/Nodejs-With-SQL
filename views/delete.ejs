@@ -13,7 +13,11 @@
   <body>
     <div class="container">
       <h1>Delete Specific Data</h1>
-      <form action="/users/<%= id %>?_method=DELETE" method="POST">
+      <form
+        action="/users/<%= id %>?_method=DELETE"
+        method="POST"
+        class="delete-Form"
+      >
         <input
           type="email"
           name="email"
@@ -31,5 +35,7 @@
         <button type="submit" class="btn btn-danger">Delete</button>
       </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/deletePopup.js"></script>
   </body>
 </html>
